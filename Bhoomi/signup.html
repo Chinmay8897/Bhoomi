@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+            background-color: #2D4934; /* Dark green background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #F0F8F3; /* Light cream background for the form */
+            border-radius: 20px;
+            width: 800px;
+            display: flex;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            background-color: #2D4934; /* Dark green background for the image section */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: auto; /* Ensure the height scales automatically */
+        }
+
+        .image-section img {
+            width: 100%;
+            height: 100%; /* Adjusted to match the height of the form section */
+            border-radius: 15px;
+            object-fit: cover; /* Ensures the image covers the section without distortion */
+        }
+
+        .form-section {
+            padding: 40px 30px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-section h2 {
+            font-size: 32px;
+            color: #2D4934; /* Dark green text */
+            margin-bottom: 30px;
+        }
+
+        .form-section label {
+            font-size: 14px;
+            color: #2D4934; /* Dark green text */
+        }
+
+        .form-section input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #E7EAE4; /* Light grey background for inputs */
+        }
+
+        .form-section button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #F0F8F3; /* Light cream text */
+            background-color: #2D4934; /* Dark green background */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 15px; /* Add margin-bottom for spacing between buttons */
+        }
+
+        .google-button {
+            width: 100%;
+            padding: 15px; /* Matching padding */
+            font-size: 18px; /* Matching font size */
+            font-weight: bold;
+            color: #F0F8F3; /* Light cream text color */
+            background-color: #2D4934; /* Dark green background */
+            border: none; /* Matching border */
+            border-radius: 10px; /* Matching border-radius */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .google-button img {
+            width: 20px; /* Adjusted logo size */
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .form-section .login-link {
+            margin-top: 20px;
+            text-align: center;
+            color: #2D4934; /* Dark green text */
+            font-size: 14px;
+        }
+
+        .form-section .login-link a {
+            color: #2D4934; /* Dark green text */
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section">
+        <img src="farmerchicken.png" alt="Farmer Image">
+    </div>
+    <div class="form-section">
+        <h2>Create Account</h2>
+        <form>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="First Name">
+            
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+            
+            <button type="submit">Create Account</button>
+            <button type="button" class="google-button">
+                <img src="googlelogo.png" alt="Google Logo">
+                Sign Up with Google
+            </button>
+            
+            <div class="login-link">
+                Already have an account? <a href="#">Login</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

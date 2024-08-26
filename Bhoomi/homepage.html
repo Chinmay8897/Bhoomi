@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Guide</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="#">Farmers Guide</a></div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+            <button><a href="#">SignIn</a></button>
+            <button><a href="#">SignUp</a></button>
+        </ul>
+    </nav>
+    <main>
+        <section class="section1">
+            <p>Picture or a background design.</p>
+            <button>Get Started</button>
+        </section>
+
+        <section class="section2">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service reveal">
+                    <button><a href="#">Land</a></button>
+                </div>
+                <div class="service reveal">
+                    <button><a href="#">Diseases</a></button>
+                </div>
+                <div class="service reveal">
+                    <button><a href="#">Market</a></button>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact Us</p>
+    </footer>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            background-color: navy;
+            min-height: 100vh;
+        }
+
+        .logo {
+            background-color: aqua;
+            display: inline-block;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            align-items: end;
+        }
+
+        li a {
+            color: whitesmoke;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            display: flex;
+            margin-bottom: 20px;
+            margin: 100px 0 250px 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section2 {
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 0 20px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 1em;
+            align-items: center;
+        }
+
+        .services .service {
+            background-color: orange;
+            height: 500px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: antiquewhite;
+        }
+
+        p {
+            color: antiquewhite;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        const revealOptions = {
+            threshold: 0.3,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, revealOnScroll) {
+            entries.forEach((entry, index) => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 700);
+                    revealOnScroll.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        reveals.forEach((reveal, index) => {
+            revealOnScroll.observe(reveal);
+        });
+    </script>
+</body>
+</html>

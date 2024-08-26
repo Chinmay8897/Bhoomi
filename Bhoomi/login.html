@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+            background-color: #2D4934;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #F0F8F3;
+            border-radius: 20px;
+            width: 900px;
+            display: flex;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .image-section {
+            background-color: #2D4934;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .form-section {
+            padding: 40px 30px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-section h2 {
+            font-size: 36px;
+            color: #2D4934;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-section label {
+            font-size: 16px;
+            color: #2D4934;
+            margin-bottom: 5px;
+        }
+
+        .form-section input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #E7EAE4;
+        }
+
+        .form-section button {
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #F0F8F3;
+            background-color: #2D4934;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-section button:hover {
+            background-color: #1E3426;
+        }
+
+        .form-section .login-link {
+            margin-top: 20px;
+            text-align: center;
+            color: #2D4934;
+            font-size: 16px;
+        }
+
+        .form-section .login-link a {
+            color: #2D4934;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 1024px) {
+            .container {
+                width: 90%;
+                flex-direction: column;
+            }
+
+            .image-section, .form-section {
+                width: 100%;
+            }
+
+            .form-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-section">
+        <img src="farmerchicken.png" alt="Farmer Image">
+    </div>
+    <div class="form-section">
+        <h2>Login</h2>
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            
+            <button type="submit">Login</button>
+            
+            <div class="login-link">
+                Do not have an account? <a href="#">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
